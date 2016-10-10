@@ -1,0 +1,17 @@
+package gw2api.common;
+
+@lombok.NoArgsConstructor
+@lombok.Getter
+@lombok.EqualsAndHashCode(callSuper = true)
+@lombok.ToString
+public class Item extends BasicItem {
+    private int skin = -1;
+    private int[] upgrades;
+    private int[] infusions;
+    private Binding binding;
+    private String boundTo;
+
+    public enum Binding {
+        ACCOUNT, CHARACTER;
+    }
+}
